@@ -146,6 +146,9 @@ class hexbright {
   // init hardware.
   // put this in your setup().
   static void init_hardware();
+	
+	// completely turn off the flashlight
+	static void power_down(int when = NOW);
   
   // Put update in your loop().  It will block until update_delay has passed.
   static void update();
@@ -492,6 +495,10 @@ void hexbright::init_hardware() {
   read_charge_state();
   if(get_charge_state()==BATTERY)
     press_button();
+}
+
+void hexbright::power_down(int when) {
+	set_light(CURRENT_LEVEL, OFF_LEVEL, when);
 }
 
 word loopCount;

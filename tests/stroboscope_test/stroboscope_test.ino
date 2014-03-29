@@ -56,7 +56,7 @@ void loop() {
     mode = STROBE_MODE;
 //    hb.set_light(400, 400, NOW);
   } else if (hb.button_held()>1000) {
-    hb.set_light(CURRENT_LEVEL, OFF_LEVEL, NOW);
+    hb.power_down()
     // reset variables in case we're plugged into USB
     i = 0;
     s_delay = 0;
@@ -100,7 +100,7 @@ void loop() {
     i = (i+1)%5;
     hb.set_light(400, 400, NOW);
   } else if (hb.button_held()>1000) {
-    hb.set_light(CURRENT_LEVEL, OFF_LEVEL, NOW);
+    hb.power_down()
     i = 0;
   }
 }

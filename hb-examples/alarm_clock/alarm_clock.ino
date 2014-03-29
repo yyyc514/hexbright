@@ -32,7 +32,7 @@ void loop() {
   hb.update(); 
   if(hb.button_pressed_time()>3000) {
     mode = OFF_MODE;
-    hb.set_light(CURRENT_LEVEL, OFF_LEVEL, NOW);
+    hb.power_down()
   }
   switch (mode) {
   case OFF_MODE:

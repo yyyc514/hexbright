@@ -165,7 +165,7 @@ void loop() {
 	hb.set_light(CURRENT_LEVEL, 0, NOW);
 	DBG(Serial.println("Stay alive"));      
       } else {
-	hb.set_light(CURRENT_LEVEL, OFF_LEVEL, NOW);
+	hb.power_down()
 	DBG(Serial.println("Shut down"));
       }
 
@@ -215,7 +215,7 @@ void loop() {
       hb.set_led(GLED, 100, 100, 64);
       hb.set_light(CURRENT_LEVEL, 0, NOW);
     } else if(BIT_CHECK(bitreg,GLOW_MODE_JUST_CHANGED)) {
-      hb.set_light(CURRENT_LEVEL, OFF_LEVEL, NOW);
+      hb.power_down()
     }
 
     // holding the button

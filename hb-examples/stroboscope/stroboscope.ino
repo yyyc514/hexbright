@@ -31,7 +31,7 @@ void loop() {
     // turn off?
     if (hb.button_pressed_time()>200) {
       set_strobe_delay(STROBE_OFF); // if this line doesn't compile, uncomment STROBE in hexbright.h
-      hb.set_light(CURRENT_LEVEL, OFF_LEVEL, NOW);
+      hb.power_down()
       mode = OFF_MODE;
       return;
     }

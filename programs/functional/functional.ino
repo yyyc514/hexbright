@@ -63,7 +63,7 @@ void loop() {
   }
   if(hb.button_pressed_time()>700) { // if held for over 700 milliseconds (whether or not it's been released), go to OFF mode
     mode = OFF_MODE;
-    hb.set_light(CURRENT_LEVEL, OFF_LEVEL, NOW);
+    hb.power_down()
     // in case we are under usb power, reset state
     brightness_level = 4;
   }

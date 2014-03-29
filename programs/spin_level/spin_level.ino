@@ -62,7 +62,7 @@ void loop() {
       mode = SPIN_LEVEL_MODE; 
       press_used = true;
     } else if (mode==SPIN_LEVEL_MODE) {
-      hb.set_light(CURRENT_LEVEL, OFF_LEVEL, NOW);
+      hb.power_down()
       mode = OFF_MODE;
       press_used = true;
     }
